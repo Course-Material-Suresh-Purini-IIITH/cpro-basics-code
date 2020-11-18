@@ -11,20 +11,29 @@ main()
     int marks;
 
     printf("Enter student marks: ");
+    fflush(stdout);
     scanf("%d", &marks);
 
-    if (marks >= A_CUTOFF)
-        grade = 'A';
-    else if (marks >= B_CUTOFF)
-        grade = 'B';
-    else if (marks >= C_CUTOFF)
-        grade = 'C';
-    else if (marks >= D_CUTOFF)
-        grade = 'D';
-    else
-        grade = 'F';
+    printf("Marks entered: %d\n", marks);
 
+    if (marks >= A_CUTOFF)
+    {
+        printf("Entered here at grade A\n");
+        grade = 'A';
+    }
+    else
+    {
+        if (marks >= B_CUTOFF)
+            grade = 'B';
+        else if (marks >= C_CUTOFF)
+            grade = 'C';
+        else if (marks >= D_CUTOFF)
+            grade = 'D';
+        else
+            grade = 'F';
+    }
     printf("Student Grade: %c, ", grade);
+    fflush(stdout);
 
     switch (grade)
     {

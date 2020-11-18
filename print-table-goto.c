@@ -14,11 +14,12 @@ void main(void)
         printf("%d x %d = %d\n", N, i, N*i);
         i = i + 1;
     }
+L2: ;
 */
 
     i = 1;
 L1:
-    if (!(i <= 10))
+    if (i > 10)
         goto L2;
     printf("%d x %d = %d\n", N, i, N * i);
     i = i + 1;

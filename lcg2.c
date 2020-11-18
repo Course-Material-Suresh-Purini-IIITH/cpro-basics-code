@@ -16,6 +16,11 @@ main()
     X = time(0);
 
     X = (a * X + c) % m;
+    printf("R1: %u\n", X);
 
-    printf("%u\n", X);
+    X = (a * X + c) % m;
+    printf("R2: %u\n", X);
+
+    X = (a * X + c) % m;
+    printf("R3: %u\n", X);
 }

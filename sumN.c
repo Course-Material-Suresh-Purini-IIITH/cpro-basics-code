@@ -8,8 +8,9 @@ main()
     printf("Enter N: ");
     scanf("%d", &N);
 
+    assert(N > 0);
     for(i = 1; i <= N; ++i) {
-        sum = sum + i*i;
+        sum = sum + i;
     }
 
     printf("Sum of first N natural numbers: %d\n", sum); 

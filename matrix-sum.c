@@ -10,7 +10,7 @@ main()
 
     for(int i=0; i < N; ++i) {
         for(int j = 0; j < N; ++j){
-           scanf("%d", &A[i][j]);
+           scanf("%d", &A[j][i]);
         }
     }
 

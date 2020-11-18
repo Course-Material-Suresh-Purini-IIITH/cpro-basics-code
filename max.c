@@ -5,17 +5,23 @@
 
 int main(void)
 {
-    int n, max = INT_MIN;
+    int n, max, retval;
 
     printf("This program finds the maximum of a series of integers.\n");
-    printf("Enter integers (0 to terminate): ");
-    scanf("%d", &n);
-    while (n != 0)
+    retval = scanf("%d", &n);
+    max = n;
+    while (retval == 1)
     {
-        if(n > max)
-        max = n;
-        scanf("%d", &n);
+        if (n > max)
+            max = n;
+        retval = scanf("%d", &n);
     }
-    printf("The max is: %d\n", max);
+    if (max != 0)
+        printf("\nThe max is: %d\n", max);
+    else
+    {
+        printf("The list is empty!\n");
+    }
+    
     return 0;
 }

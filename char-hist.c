@@ -21,6 +21,6 @@ main()
 
     printf("\tLetter Histogram==>\n");
     for(int i = 0; i < 26; ++i) {
-        printf("%c -- %d -- %.1f\n", 'A' + i, letterhist[i], letterhist[i]/count*100);
+        printf("%c -- %d -- %.1f\n", 'A' + i, letterhist[i], (letterhist[i]/count)*100);
     }
 }

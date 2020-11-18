@@ -11,20 +11,22 @@
 
 unsigned int X;
 
-void srand(unsigned int seed)
+void my_srand(unsigned int seed)
 {
     X = seed;
 }
 
-unsigned int rand()
+unsigned int my_rand()
 {
     X = (a * X + c) % m;
+
+    return X;
 }
 
 main()
 {
 
-    srand(time(0));
+    my_srand(time(0));
 
-    printf("%u\n", rand());
+    printf("%u\n", my_rand());
 }

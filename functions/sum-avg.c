@@ -10,14 +10,14 @@ int max(int a, int b)
 
 float average(int a, int b)
 {
-    float average;
+    float mean;
 
-    average = (a + b)/2;
+    mean = (a + b) / 2.0;
 
-    return average;
+    return mean;
 }
 
-main()
+int main()
 {
     int A, B;
 
@@ -27,4 +27,6 @@ main()
 
     printf("Average: %f\n", average(A, B));
     printf("Maximum: %d\n", max(A, B));
+
+    return 0;
 }

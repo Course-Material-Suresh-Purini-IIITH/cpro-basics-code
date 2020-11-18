@@ -1,4 +1,5 @@
 #include <stdio.h>
+//#include <unistd.h>
 
 void main(void) {
     int i, N;
@@ -10,5 +11,4 @@ void main(void) {
     for(i = 1; i <=10; ++i) {
         printf("%d x %d = %d\n", N, i, N*i);
     }
-
 }
