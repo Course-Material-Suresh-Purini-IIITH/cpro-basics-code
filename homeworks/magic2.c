@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define DEBUG 2
+#define ASSERT
+
+#include <assert.h>
+
 #define N 5
 
 bool verifyMagic(int A[][N])
@@ -51,7 +56,7 @@ void displayArray(int A[][N])
 
 main()
 {
-    int A[N][N] = {0}, i;
+    int A[N][N] , i;
 
     int c_row = 0, c_col = N / 2;
 
@@ -63,7 +68,10 @@ main()
 #if DEBUG >= 1
         printf("c_row = %d c_col = %d\n ", c_row, c_col);
 #endif
-
+// loop invariant
+#ifdef ASSERT
+        assert(A[c_row][c_col] == 0);
+#endif
         A[c_row][c_col] = i;
 
         // Try to go one row up and one col right

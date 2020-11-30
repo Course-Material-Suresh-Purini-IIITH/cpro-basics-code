@@ -55,7 +55,9 @@ main()
     while (i <= N * N)
     {
         // printf("c_row = %d c_col = %d\n ", c_row, c_col);
-
+#ifdef DEBUG
+        displayArray(A);
+#endif
         if (A[c_row][c_col] != 0)
         {
             c_row = (prev_row + 1 + N) % N;
